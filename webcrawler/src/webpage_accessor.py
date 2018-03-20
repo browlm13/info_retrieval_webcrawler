@@ -7,6 +7,7 @@ import hashlib
 import requests
 from urllib.parse import urljoin
 import logging
+import sys
 
 # mylib
 from src import file_parser
@@ -15,6 +16,8 @@ from src import text_processing
 # logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+logger.addHandler(logging.FileHandler("output/output_log.txt"))
+logger.addHandler(logging.StreamHandler(sys.stdout))
 
 
 def normalize_urls(base_url, raw_links):
@@ -93,4 +96,3 @@ def pull_summary(requested_url, included_attributes=("requested_url", "redirect_
     response_summary = {k:v for k,v in response_summary.items() if k in included_attributes}
 
     return response_summary
-

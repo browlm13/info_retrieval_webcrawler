@@ -7,19 +7,17 @@ import hashlib
 import requests
 from urllib.parse import urljoin
 import logging
-import sys
 
-# mylib
+# my lib
 from src import file_parser
 from src import text_processing
-from src import utils
-from src import file_io
+
 
 # logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# [TODO] move to utils
+
 def normalize_urls(base_url, raw_links):
     """ takes in list of raw links both relative and absolute and returns list of absolute links. """
     raw_links = [l for l in raw_links if l is not None]
@@ -125,7 +123,7 @@ class Crawler():
             logger.info("Duplicate Document Found")
             return
 
-        # create document term frequency dictonary
+        # create document term frequency dictionary
         if web_page_summary['content_type'] in file_parser.acepted_content_types():
             logger.info("Creating Term Frequency Dictionary")
             tfdict = pull_summary(requested_url, ('term_frequency_dict'))

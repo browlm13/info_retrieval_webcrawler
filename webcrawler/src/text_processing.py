@@ -5,6 +5,7 @@ __version__ = "1.0.1"
 
 import logging
 import string
+import sys
 
 # external
 import nltk
@@ -14,6 +15,8 @@ from nltk.probability import FreqDist
 # logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+logger.addHandler(logging.FileHandler("output/output_log.txt"))
+logger.addHandler(logging.StreamHandler(sys.stdout))
 
 
 # Text Processing

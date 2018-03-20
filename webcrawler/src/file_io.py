@@ -1,15 +1,19 @@
 import json
 import os
 import logging
+import sys
 
 # logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+logger.addHandler(logging.FileHandler("output/output_log.txt"))
+logger.addHandler(logging.StreamHandler(sys.stdout))
 
 # read in config/directory_structure.json
 # handle reading and writing of data
 
 DIRECTORY_STRUCTURE_FILE_PATH = "config/directory_structure.json"   #from root
+
 
 def load_directory_structure():
     script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -20,6 +24,7 @@ def load_directory_structure():
         directory_structure_dict = json.load(json_data)
 
     return directory_structure_dict
+
 
 def save(type, data, parameters_list):
     directory_structure_dict = load_directory_structure()
@@ -36,7 +41,8 @@ def save(type, data, parameters_list):
     with open(file_path, 'w') as file:
         file.write(json.dumps(data))
 
-def get_path(type, parameters_list):
+
+def get_path(type, parameters_list, force=False):
     directory_structure_dict = load_directory_structure()
     file_path = directory_structure_dict['path_templates'][type]
     if parameters_list is not None:
@@ -45,9 +51,12 @@ def get_path(type, parameters_list):
     # check if file exists
     if not os.path.isfile(file_path) and not os.path.isdir(file_path):
         logger.warning("file does not exit")
+        if force:
+            return file_path
         return None
 
     return file_path
+
 
 def get_template(type):
     directory_structure_dict = load_directory_structure()

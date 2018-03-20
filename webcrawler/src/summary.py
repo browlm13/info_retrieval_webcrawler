@@ -1,5 +1,6 @@
 import json
 import logging
+import sys
 
 # my lib
 from src import utils
@@ -13,13 +14,13 @@ import pandas as pd
 # logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+logger.addHandler(logging.FileHandler("output/output_log.txt"))
+logger.addHandler(logging.StreamHandler(sys.stdout))
 
-def summarize(output_directory_name):
+def display_summary(indexed_directory_name):
 
-    log_info = load_log_file(output_directory_name)
+    log_info = load_log_file(indexed_directory_name)
     seed_url = log_info['seed_url']
-
-    indexed_urls = get_indexed_urls(output_directory_name)
 
     url_indexer = base_station.URL_Indexer()
     url_indexer.load_url_indexer()
@@ -30,51 +31,52 @@ def summarize(output_directory_name):
     indexed_urls = indexed_urls.sort('ID').set_index('ID')
 
     # display urls collected
-    print("\n\n\nNumber new of indexed Urls for site \"%s\" is %s\n" % (seed_url, len(indexed_urls)))
+    print("\n\n\n\n\n\nNumber new of indexed Urls for site \"%s\" is %s\n" % (seed_url, len(indexed_urls)))
     print(indexed_urls)
 
     # display duplicates
     print("\nBroken urls found:")
-    broken_urls = get_broken_urls(output_directory_name)
+    broken_urls = get_broken_urls(indexed_directory_name)
     print(pd.DataFrame(broken_urls, columns=['Broken URL']))
 
     # display out of bounds sites
     print("\nURLs leading out of seed website: %s " % seed_url)
-    out_of_bounds_urls = get_out_of_bounds_urls(output_directory_name)
+    out_of_bounds_urls = get_out_of_bounds_urls(indexed_directory_name)
     print(pd.DataFrame(out_of_bounds_urls, columns=["Out of bounds URLs"]))
 
     # display graphic urls
     print("\nGraphic URLs indexed: ")
-    graphic_urls = get_graphic_urls(output_directory_name)
+    graphic_urls = get_graphic_urls(indexed_directory_name)
     print(pd.DataFrame(graphic_urls, columns=["Graphics URLs"]))
 
     # display urls pointing to duplicate content
     print("\nURLs with duplicate content:")
-    duplicate_content_urls = get_urls_with_duplicate_content(output_directory_name)
+    duplicate_content_urls = get_urls_with_duplicate_content(indexed_directory_name)
     #, columns=["Duplicate Content URLs"]
     print(pd.DataFrame(duplicate_content_urls))
 
-    # print document term frewuency matrix
+    # print document term frequency matrix
     print("\n\nDocument Term Frequency Matrix \n")
-    dtfm = get_document_term_frequency_matrix(output_directory_name)
+    dtfm = get_document_term_frequency_matrix(indexed_directory_name)
     print(dtfm)
 
     # display most frequently occurring terms
-    print("\n Frequently occuring terms")
+    print("\n 20 Most Frequently occuring terms")
     dtfm_corpus_term_freq = dtfm.sum()
     dtfm_corpus_term_freq.columns = ['term', 'frequency']
     print(dtfm_corpus_term_freq.sort_values(axis=0, ascending=False).head(n=20))
 
-def load_log_file(output_directory_name):
-    log_file_path = file_io.get_path('log_file', [output_directory_name])
+
+def load_log_file(indexed_directory_name):
+    log_file_path = file_io.get_path('log_file', [indexed_directory_name])
     if log_file_path is not None:
         with open(log_file_path) as json_data:
             log_info = json.load(json_data)
     return log_info
 
-def load_web_page_summaries(output_directory_name):
+def load_web_page_summaries(indexed_directory_name):
 
-    web_page_summaries_file_template = file_io.get_template('web_page_summary_file_path') % (output_directory_name, '*')
+    web_page_summaries_file_template = file_io.get_template('web_page_summary_file_path') % (indexed_directory_name, '*')
 
     web_page_summaries_list = []
     for wpsf_path in glob.glob(web_page_summaries_file_template):
@@ -83,8 +85,8 @@ def load_web_page_summaries(output_directory_name):
             web_page_summaries_list.append(wps)
     return web_page_summaries_list
 
-def load_document_frequency_dicts(output_directory_name):
-    document_frequency_dict_file_template = file_io.get_template('document_frequency_dict_file_path') % (output_directory_name, '*')
+def load_document_frequency_dicts(indexed_directory_name):
+    document_frequency_dict_file_template = file_io.get_template('document_frequency_dict_file_path') % (indexed_directory_name, '*')
 
     document_id_term_frequency_dict = {}
     for dfd_path in glob.glob(document_frequency_dict_file_template):
@@ -96,9 +98,9 @@ def load_document_frequency_dicts(output_directory_name):
 
     return document_id_term_frequency_dict
 
-def get_out_of_bounds_urls(output_directory_name):
-    wps_list = load_web_page_summaries(output_directory_name)
-    log_info = load_log_file(output_directory_name)
+def get_out_of_bounds_urls(indexed_directory_name):
+    wps_list = load_web_page_summaries(indexed_directory_name)
+    log_info = load_log_file(indexed_directory_name)
     seed_url = log_info['seed_url']
 
 
@@ -113,9 +115,9 @@ def get_out_of_bounds_urls(output_directory_name):
     out_of_bounds_urls = utils.filter_sub_directories(all_urls, [seed_url], filter_if_sub=True)
     return out_of_bounds_urls
 
-def get_graphic_urls(output_directory_name):
-    wps_list = load_web_page_summaries(output_directory_name)
-    log_info = load_log_file(output_directory_name)
+def get_graphic_urls(indexed_directory_name):
+    wps_list = load_web_page_summaries(indexed_directory_name)
+    log_info = load_log_file(indexed_directory_name)
     seed_url = log_info['seed_url']
 
 
@@ -127,25 +129,25 @@ def get_graphic_urls(output_directory_name):
     return list(set(all_graphic_urls))
 
 
-def get_indexed_urls(output_directory_name):
-    wps_list = load_web_page_summaries(output_directory_name)
+def get_indexed_urls(indexed_directory_name):
+    wps_list = load_web_page_summaries(indexed_directory_name)
     indexed_urls = []
     for wps in wps_list:
         indexed_urls.append(wps['requested_url'])
     return indexed_urls
 
 
-def get_broken_urls(output_directory_name):
+def get_broken_urls(indexed_directory_name):
 
-    wps_list = load_web_page_summaries(output_directory_name)
+    wps_list = load_web_page_summaries(indexed_directory_name)
     broken_urls = []
     for wps in wps_list:
         if wps['status_code'] is not 200:
             broken_urls.append(wps['requested_url'])
     return broken_urls
 
-def get_urls_with_duplicate_content(output_directory_name):
-    wps_list = load_web_page_summaries(output_directory_name)
+def get_urls_with_duplicate_content(indexed_directory_name):
+    wps_list = load_web_page_summaries(indexed_directory_name)
 
     content_hash_url_list = {}
     for wps in wps_list:
@@ -165,22 +167,25 @@ def get_urls_with_duplicate_content(output_directory_name):
     return urls_with_duplicate_content
 
 
-#build term frequency matrix
-def get_document_term_frequency_matrix(output_directory_name):
-    id_tf_dict = load_document_frequency_dicts(output_directory_name)
+def get_document_term_frequency_matrix(indexed_directory_name, write=True):
+    id_tf_dict = load_document_frequency_dicts(indexed_directory_name)
+
     unique_words = set()
     for doc_id, tf_dict in id_tf_dict.items():
         unique_words = unique_words | set(tf_dict.keys())
 
     doc_freq_matrix = pd.DataFrame(columns=unique_words)
-
     for doc_id, tf_dict in id_tf_dict.items():
-        terms,freqs = zip(*tf_dict.items())
+        terms, freqs = zip(*tf_dict.items())
         df = pd.DataFrame(data=[freqs], columns=terms, index=[doc_id])
         doc_freq_matrix = pd.merge(doc_freq_matrix, df, how='outer')
 
     doc_freq_matrix = doc_freq_matrix.fillna(value=0)
 
     # write to csv
-    doc_freq_matrix.to_csv('doc_term_freq_matrix.csv')
+    if write:
+        logger.info("Writing Document Term Frequency Matrix")
+        matrix_file = file_io.get_path("document_term_frequency_matrix_file_path", None, force=True)
+        doc_freq_matrix.to_csv(matrix_file)
+
     return doc_freq_matrix

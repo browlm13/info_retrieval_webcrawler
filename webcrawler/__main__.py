@@ -1,19 +1,23 @@
 #!/usr/bin/env python
-import sys
 import argparse
+import sys
+import logging
 
 # my lib
 from src import base_station
 from src import summary
 
 __author__ = 'LJ Brown'
-
+__version__ = "1.0.1"
 
 """
                               Web Crawler
                              Command Line Tool
-
 """
+
+logger = logging.getLogger(__name__)
+logger.addHandler(logging.FileHandler("output/output_log.txt"))
+logger.addHandler(logging.StreamHandler(sys.stdout))
 
 # Default Parameters
 SEED_URL = "http://lyle.smu.edu/~fmoore/"
@@ -31,5 +35,5 @@ args = parser.parse_args()
 bs = base_station.Base_Station()
 bs.scrape_website(seed_url=args.url, output_directory=args.output, max_urls_to_index=args.number, stopwords_file=args.input)
 
-# display summary
-summary.summarize(args.output)
+# display summary and write term frequency matrix to output file
+summary.display_summary(args.output)

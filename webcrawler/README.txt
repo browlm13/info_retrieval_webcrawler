@@ -1,3 +1,8 @@
+Data Structures Used:
+Queue for URL frontier
+Hash tables for indexing Documents and Urls
+Bots and CNC type architecture
+*md5 for detecting duplicates
 
 ------------------------------------------
 Output Directory Structure:
@@ -15,7 +20,9 @@ collected_data/
         documents/
             document_frequency_dict_0.json
             ...
-
+output/
+    output/document_term_frequency_matrix.csv
+    output/output_log.txt
 ------------------------------------------
 \Output Directory Structure
 ------------------------------------------

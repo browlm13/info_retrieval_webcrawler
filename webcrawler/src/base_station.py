@@ -1,12 +1,17 @@
+import logging
+import sys
+
+# my lib
 from src import utils
 from src import file_io
 from src import crawler
 from src import robot_parser
-import logging
 
 # logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+logger.addHandler(logging.FileHandler("output/output_log.txt"))
+logger.addHandler(logging.StreamHandler(sys.stdout))
 
 class URL_Indexer():
 
@@ -115,7 +120,7 @@ class Document_Indexer():
         self.hash_id_index.add(content_hash)
         document_id = self.hash_id_index[content_hash]
 
-        # add doc id and hash to term frequency dictonary
+        # add doc id and hash to term frequency dictionary
         term_frequency_dictionary['document_id'] = document_id
         term_frequency_dictionary['content_hash'] = content_hash
 
@@ -132,6 +137,7 @@ class Document_Indexer():
         document_indexer_file_path = file_io.get_path('doc_hash_id_map_file', None)
         if document_indexer_file_path is not None:
             self.hash_id_index.load(document_indexer_file_path)
+
 
 class Base_Station():
 

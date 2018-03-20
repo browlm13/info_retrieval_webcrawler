@@ -1,12 +1,19 @@
-from src import webpage_accessor
 import logging
+import sys
+
+# my lib
+from src import webpage_accessor
 
 # logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+logger.addHandler(logging.FileHandler("output/output_log.txt"))
+logger.addHandler(logging.StreamHandler(sys.stdout))
+
 #
 #   Read robots.txt file and return list of normalized disallowed urls
 #
+
 
 def read_robots_dissaloud(site_url):
     forbidden_urls = []
