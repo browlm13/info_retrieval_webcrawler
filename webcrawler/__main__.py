@@ -15,9 +15,6 @@ __author__ = 'LJ Brown'
 
 """
 
-# set program name
-program_name = sys.argv[0]
-
 # Default Parameters
 SEED_URL = "http://lyle.smu.edu/~fmoore/"
 MAX_URLS_TO_INDEX = None
