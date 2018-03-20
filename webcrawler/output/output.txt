@@ -1,0 +1,348 @@
+INFO:src.base_station:Loading Index Files
+WARNING:src.file_io:file does not exit
+WARNING:src.file_io:file does not exit
+WARNING:src.file_io:file does not exit
+INFO:src.webpage_accessor:Response Status Code: 200
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/
+INFO:src.base_station:Number of sites in index: 0
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/
+INFO:src.base_station:Saving response summary
+INFO:src.crawler:Creating Term Frequency Dictionary
+INFO:src.crawler:Response Status Code: 200
+INFO:src.crawler:Sending Term Frequency Dictionary
+INFO:src.base_station:Saving Document Term Frequency Dictonary ID: 1
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/index-fall2017.htm
+INFO:src.base_station:Number of sites in index: 1
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/index-fall2017.htm
+INFO:src.base_station:Saving response summary
+INFO:src.crawler:Creating Term Frequency Dictionary
+INFO:src.crawler:Response Status Code: 200
+INFO:src.crawler:Sending Term Frequency Dictionary
+INFO:src.base_station:Saving Document Term Frequency Dictonary ID: 2
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/CSE7337_syllabus.pdf
+INFO:src.base_station:Number of sites in index: 2
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/CSE7337_syllabus.pdf
+INFO:src.base_station:Saving response summary
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/schedule.htm
+INFO:src.base_station:Number of sites in index: 3
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/schedule.htm
+INFO:src.base_station:Saving response summary
+INFO:src.crawler:Creating Term Frequency Dictionary
+INFO:src.crawler:Response Status Code: 200
+INFO:src.crawler:Sending Term Frequency Dictionary
+INFO:src.base_station:Saving Document Term Frequency Dictonary ID: 3
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/CSE5337_syllabus.pdf
+INFO:src.base_station:Number of sites in index: 4
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/CSE5337_syllabus.pdf
+INFO:src.base_station:Saving response summary
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/index-final.htm
+INFO:src.base_station:Number of sites in index: 5
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/index-final.htm
+INFO:src.base_station:Saving response summary
+INFO:src.crawler:Creating Term Frequency Dictionary
+INFO:src.crawler:Response Status Code: 200
+INFO:src.crawler:Sending Term Frequency Dictionary
+INFO:src.base_station:Saving Document Term Frequency Dictonary ID: 4
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/timeline.pdf
+INFO:src.base_station:Number of sites in index: 6
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/timeline.pdf
+INFO:src.base_station:Saving response summary
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/syl_5330.pdf
+INFO:src.base_station:Number of sites in index: 7
+INFO:src.crawler:Response Status Code: 404
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/syl_5330.pdf
+INFO:src.base_station:Saving response summary
+INFO:src.crawler:Duplicate Document Found
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/syl_7330.pdf
+INFO:src.base_station:Number of sites in index: 8
+INFO:src.crawler:Response Status Code: 404
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/syl_7330.pdf
+INFO:src.base_station:Saving response summary
+INFO:src.crawler:Duplicate Document Found
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/this_aint_gonna_work.htm
+INFO:src.base_station:Number of sites in index: 9
+INFO:src.crawler:Response Status Code: 404
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/this_aint_gonna_work.htm
+INFO:src.base_station:Saving response summary
+INFO:src.crawler:Duplicate Document Found
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/misc/IEEE-Spectrum-The-Dark-Dialect-Oct-2017.pdf
+INFO:src.base_station:Number of sites in index: 10
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/misc/IEEE-Spectrum-The-Dark-Dialect-Oct-2017.pdf
+INFO:src.base_station:Saving response summary
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/misc/CACM-Internet-Advertising-Oct-2017.pdf
+INFO:src.base_station:Number of sites in index: 11
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/misc/CACM-Internet-Advertising-Oct-2017.pdf
+INFO:src.base_station:Saving response summary
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/misc/figure6-12.xlsx
+INFO:src.base_station:Number of sites in index: 12
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/misc/figure6-12.xlsx
+INFO:src.base_station:Saving response summary
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/misc/count_letters_duplicate.txt
+INFO:src.base_station:Number of sites in index: 13
+INFO:src.crawler:Response Status Code: 404
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/misc/count_letters_duplicate.txt
+INFO:src.base_station:Saving response summary
+INFO:src.crawler:Duplicate Document Found
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/misc/count_letters.txt
+INFO:src.base_station:Number of sites in index: 14
+INFO:src.crawler:Response Status Code: 404
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/misc/count_letters.txt
+INFO:src.base_station:Saving response summary
+INFO:src.crawler:Duplicate Document Found
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/misc/levenshtein.html
+INFO:src.base_station:Number of sites in index: 15
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/misc/levenshtein.html
+INFO:src.base_station:Saving response summary
+INFO:src.crawler:Creating Term Frequency Dictionary
+INFO:src.crawler:Response Status Code: 200
+INFO:src.crawler:Sending Term Frequency Dictionary
+INFO:src.base_station:Saving Document Term Frequency Dictonary ID: 5
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/misc/sim_example-2018-02-15.xlsx
+INFO:src.base_station:Number of sites in index: 16
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/misc/sim_example-2018-02-15.xlsx
+INFO:src.base_station:Saving response summary
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/index.htm
+INFO:src.base_station:Number of sites in index: 17
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/index.htm
+INFO:src.base_station:Saving response summary
+INFO:src.crawler:Duplicate Document Found
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/misc/bigram-example.jpg
+INFO:src.base_station:Number of sites in index: 18
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/misc/bigram-example.jpg
+INFO:src.base_station:Saving response summary
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/misc/mercator-article.pdf
+INFO:src.base_station:Number of sites in index: 19
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/misc/mercator-article.pdf
+INFO:src.base_station:Saving response summary
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/misc/useragent.php
+INFO:src.base_station:Number of sites in index: 20
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/misc/useragent.php
+INFO:src.base_station:Saving response summary
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/index_duplicate.htm
+INFO:src.base_station:Number of sites in index: 21
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/index_duplicate.htm
+INFO:src.base_station:Saving response summary
+INFO:src.crawler:Duplicate Document Found
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/misc/algorithm-1-7.pdf
+INFO:src.base_station:Number of sites in index: 22
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/misc/algorithm-1-7.pdf
+INFO:src.base_station:Saving response summary
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/does_not_exist.htm
+INFO:src.base_station:Number of sites in index: 23
+INFO:src.crawler:Response Status Code: 404
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/does_not_exist.htm
+INFO:src.base_station:Saving response summary
+INFO:src.crawler:Duplicate Document Found
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/misc/permutermindex-example.jpg
+INFO:src.base_station:Number of sites in index: 24
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/misc/permutermindex-example.jpg
+INFO:src.base_station:Saving response summary
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/misc/porter_stemmer_example.html
+INFO:src.base_station:Number of sites in index: 25
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/misc/porter_stemmer_example.html
+INFO:src.base_station:Saving response summary
+INFO:src.crawler:Creating Term Frequency Dictionary
+INFO:src.crawler:Response Status Code: 200
+INFO:src.crawler:Sending Term Frequency Dictionary
+INFO:src.base_station:Saving Document Term Frequency Dictonary ID: 6
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/misc/exam1.html
+INFO:src.base_station:Number of sites in index: 26
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/misc/exam1.html
+INFO:src.base_station:Saving response summary
+INFO:src.crawler:Creating Term Frequency Dictionary
+INFO:src.crawler:Response Status Code: 200
+INFO:src.crawler:Sending Term Frequency Dictionary
+INFO:src.base_station:Saving Document Term Frequency Dictonary ID: 7
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/misc/example-2018-02-27.xlsx
+INFO:src.base_station:Number of sites in index: 27
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/misc/example-2018-02-27.xlsx
+INFO:src.base_station:Saving response summary
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Crawling: https://s2.smu.edu/~fmoore/SMU-CSE-LOGO.gif
+INFO:src.base_station:Number of sites in index: 28
+INFO:src.crawler:Response Status Code: 200
+INFO:src.base_station:Adding new URL to index: https://s2.smu.edu/~fmoore/SMU-CSE-LOGO.gif
+INFO:src.base_station:Saving response summary
+INFO:src.base_station:Saving Index Files
+INFO:src.base_station:Saving Index Files
+/Users/ljbrown/PycharmProjects/webcrawler_v5/src/summary.py:30: FutureWarning: sort(columns=....) is deprecated, use sort_values(by=.....)
+  indexed_urls = indexed_urls.sort('ID').set_index('ID')
+
+
+
+Number new of indexed Urls for site "https://s2.smu.edu/~fmoore/" is 29
+
+                                                  URL
+ID                                                   
+1                         https://s2.smu.edu/~fmoore/
+2       https://s2.smu.edu/~fmoore/index-fall2017.htm
+3     https://s2.smu.edu/~fmoore/CSE7337_syllabus.pdf
+4             https://s2.smu.edu/~fmoore/schedule.htm
+5     https://s2.smu.edu/~fmoore/CSE5337_syllabus.pdf
+6          https://s2.smu.edu/~fmoore/index-final.htm
+7             https://s2.smu.edu/~fmoore/timeline.pdf
+8             https://s2.smu.edu/~fmoore/syl_5330.pdf
+9             https://s2.smu.edu/~fmoore/syl_7330.pdf
+10  https://s2.smu.edu/~fmoore/this_aint_gonna_wor...
+11  https://s2.smu.edu/~fmoore/misc/IEEE-Spectrum-...
+12  https://s2.smu.edu/~fmoore/misc/CACM-Internet-...
+13    https://s2.smu.edu/~fmoore/misc/figure6-12.xlsx
+14  https://s2.smu.edu/~fmoore/misc/count_letters_...
+15  https://s2.smu.edu/~fmoore/misc/count_letters.txt
+16   https://s2.smu.edu/~fmoore/misc/levenshtein.html
+17  https://s2.smu.edu/~fmoore/misc/sim_example-20...
+18               https://s2.smu.edu/~fmoore/index.htm
+19  https://s2.smu.edu/~fmoore/misc/bigram-example...
+20  https://s2.smu.edu/~fmoore/misc/mercator-artic...
+21      https://s2.smu.edu/~fmoore/misc/useragent.php
+22     https://s2.smu.edu/~fmoore/index_duplicate.htm
+23  https://s2.smu.edu/~fmoore/misc/algorithm-1-7.pdf
+24      https://s2.smu.edu/~fmoore/does_not_exist.htm
+25  https://s2.smu.edu/~fmoore/misc/permutermindex...
+26  https://s2.smu.edu/~fmoore/misc/porter_stemmer...
+27         https://s2.smu.edu/~fmoore/misc/exam1.html
+28  https://s2.smu.edu/~fmoore/misc/example-2018-0...
+29        https://s2.smu.edu/~fmoore/SMU-CSE-LOGO.gif
+
+Broken urls found:
+                                          Broken URL
+0            https://s2.smu.edu/~fmoore/syl_7330.pdf
+1            https://s2.smu.edu/~fmoore/syl_5330.pdf
+2  https://s2.smu.edu/~fmoore/this_aint_gonna_wor...
+3      https://s2.smu.edu/~fmoore/does_not_exist.htm
+4  https://s2.smu.edu/~fmoore/misc/count_letters_...
+5  https://s2.smu.edu/~fmoore/misc/count_letters.txt
+
+URLs leading out of seed website: https://s2.smu.edu/~fmoore/ 
+                                   Out of bounds URLs
+0                   http://9ol.es/porter_js_demo.html
+1          https://tartarus.org/martin/PorterStemmer/
+2                          mailto:fmoore@lyle.smu.edu
+3             http://search.carrot2.org/stable/search
+4   https://en.wikipedia.org/wiki/Document_classif...
+5                            https://www.smu.edu/lyle
+6   https://www.smu.edu/EnrollmentServices/Registr...
+7    http://oracle.com.edgesuite.net/timeline/oracle/
+8            https://en.wikipedia.org/wiki/Stop_words
+9                 http://www.gedpage.com/soundex.html
+10               https://en.wikipedia.org/wiki/Tf*idf
+11                              mailto:fmoore@smu.edu
+12  https://idp.smu.edu/idp/profile/SAML2/Redirect...
+13                     http://lucene.apache.org/core/
+
+Graphic URLs indexed: 
+                                       Graphics URLs
+0        https://s2.smu.edu/~fmoore/SMU-CSE-LOGO.gif
+1  https://s2.smu.edu/~fmoore/SMU-CSE-LOGO-COLOR.png
+2  https://s2.smu.edu/~fmoore/SMU-CSE-LOGO-COLOR.gif
+
+URLs with duplicate content:
+                             0                                     1  \
+0  https://s2.smu.edu/~fmoore/  https://s2.smu.edu/~fmoore/index.htm   
+
+                                                2  
+0  https://s2.smu.edu/~fmoore/index_duplicate.htm  
+
+
+Document Term Frequency Matrix 
+
+   syllabu  locat  ga.typ  requir  document  compress  catch  mercat  articl  \
+0        0      0       0       0         0         0      0       0       0   
+1        0      0       1       1         2         0      0       0       0   
+2        2      0       0       0         0         0      0       0       0   
+3        0      0       0       0         1         1      1       1       3   
+4        0      2       0       0         0         0      0       0       0   
+5        2      0       0       0         0         0      0       0       1   
+6        2      0       0       0         0         0      0       0       0   
+
+   topic   ...     fast  j-1  array  do_calc  levenshteindist  cost  function  \
+0      0   ...      1.0  3.0    2.0      1.0              2.0   4.0       2.0   
+1      1   ...      0.0  0.0    0.0      0.0              0.0   0.0       2.0   
+2      0   ...      0.0  0.0    0.0      0.0              0.0   0.0       0.0   
+3      1   ...      0.0  0.0    0.0      0.0              0.0   0.0       0.0   
+4      0   ...      0.0  0.0    0.0      0.0              0.0   0.0       0.0   
+5      0   ...      0.0  0.0    0.0      0.0              0.0   0.0       0.0   
+6      0   ...      0.0  0.0    0.0      0.0              0.0   0.0       0.0   
+
+   new  math.min  respect  
+0  2.0       1.0      1.0  
+1  0.0       0.0      0.0  
+2  0.0       0.0      0.0  
+3  0.0       0.0      0.0  
+4  0.0       0.0      0.0  
+5  0.0       0.0      0.0  
+6  0.0       0.0      0.0  
+
+[7 rows x 251 columns]
+
+ Frequently occuring terms
+chpt        14.0
+stem        13.0
+freeman     12.0
+moor        12.0
+cse         11.0
+spring      11.0
+hmwk        11.0
+due          8.0
+assign       8.0
+site         8.0
+distanc      7.0
+var          7.0
+may          7.0
+fmoor        6.0
+wordlist     6.0
+len_t        6.0
+syllabu      6.0
+len_         6.0
+exampl       6.0
+fall         6.0
+dtype: float64
