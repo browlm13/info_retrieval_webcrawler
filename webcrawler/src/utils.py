@@ -33,8 +33,6 @@ class Incremental_Hash_ID():
 
     def load(self, file_path):
         with open(file_path) as json_data:
-            #dict.clear(self)
-            #self.update(json.load(json_data))
             self.table = json.load(json_data)
             self.cur_id = max(self.table.values()) + 1
 
@@ -225,9 +223,4 @@ class URL_Resolver():
     def load(self, file_path):
         with open(file_path) as json_data:
             self.url_resolution_map = json.load(json_data)
-
-
-
-
-
 
