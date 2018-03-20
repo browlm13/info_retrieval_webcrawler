@@ -19,7 +19,7 @@ from src import file_io
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-
+# [TODO] move to utils
 def normalize_urls(base_url, raw_links):
     """ takes in list of raw links both relative and absolute and returns list of absolute links. """
     raw_links = [l for l in raw_links if l is not None]
@@ -136,112 +136,5 @@ class Crawler():
                         logger.info("Sending Term Frequency Dictionary")
                         # report to base station
                         self.base_station.report_term_frequency_dictionary(tfdict, web_page_summary['content_hash'])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
